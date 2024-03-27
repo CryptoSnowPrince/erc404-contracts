@@ -24,13 +24,13 @@ async function main() {
     console.log(`Deployer address is ${deployer.address}`,);
     console.log(`Deployer balance is ${hre.ethers.formatEther(balance)} ETH`,);
 
-    // console.log('deploy MyERC404');
-    const myERC404 = await hre.ethers.deployContract("MyERC404", [deployer]);
+    // console.log('deploy DaniloERC404');
+    const myERC404 = await hre.ethers.deployContract("DaniloERC404", [deployer]);
     await myERC404.waitForDeployment();
     console.log(`myERC404 deployed to ${myERC404.target}`);
 
     fs.writeFileSync('deployed/addresses.json', JSON.stringify({
-      'MyERC404': myERC404.target,
+      'DaniloERC404': myERC404.target,
     }, null, 2))
     console.log('deploy OK')
   } catch (error) {

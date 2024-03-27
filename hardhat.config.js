@@ -22,8 +22,8 @@ module.exports = {
       accounts: {
         mnemonic: mnemonicPhrase,
         path: 'm/44\'/60\'/0\'/0',
-        initialIndex: 0,
-        count: 1,
+        initialIndex: 2,
+        count: 3,
         passphrase: mnemonicPassword,
       },
       gasPrice: 100000000,
